@@ -5,14 +5,13 @@
 3. **No Silent Failure, No Silent Data Loss**. Never hide failures or silently discard, truncate, or corrupt data.
 4. **Distrust External Input**. Validate inputs that cross a trust boundary before relying on them. Never assume external inputs are well-formed or safe.
 
-
 ## Decision Principles (When multiple options exist, which way to lean)
 
-**Simplicity**
+**Simplicity & Restraint**
 - **Simple over clever**. Choose the simplest solution that meets the requirements. Optimize for the reader, not the writer.
+- **Small, reversible steps**. Prefer focused changes that are easy to review, verify, and revert. Avoid expanding scope beyond what the change requires. Before an irreversible action, ensure a recovery path or explicit approval.
 - **One source of truth over convenient duplication (DRY)**. Every piece of knowledge has one authoritative representation.
 - **Orthogonal over coupled**. Minimize unnecessary dependencies, so that a change in one place does not cascade into others.
-
 
 **Correctness**
 - **Domain meaning over technical convenience**. Choose joins, defaults, and time definitions for what the data means, not for what runs. If the meaning is unclear, ask or state the assumption.
