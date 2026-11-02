@@ -8,8 +8,8 @@
 ## Decision Principles (When multiple options exist, which way to lean)
 
 **Correctness**
-- **Domain meaning over technical convenience**. Choose joins, defaults, and time definitions for what the data means, not for what runs. If the meaning is unclear, ask or state the assumption.
-- **Guaranteed over coincidental behavior**. Rely only on behavior that is documented or explicitly specified (such as ordering and defaults), not on what happens to work in the current environment.
+- **Domain meaning over technical convenience**. Choose implementations for what the data and requirements actually mean, not for what merely runs. If the meaning is unclear, ask or state the assumption.
+- **Guaranteed over coincidental behavior**. Rely only on behavior that is documented or explicitly specified, not on what happens to work in the current environment.
 - **Established contracts over defensive redundancy**. Enforce contracts at boundaries, and within a component rely on guarantees backed by types, schemas, or documented conventions. Where a required guarantee is absent, verify rather than assume.
 - **Fail fast over limp along**. Stop the affected work when a violated condition makes further results unreliable. Isolate or degrade only where the requirements or design explicitly allow it.
 - **Root cause over symptom patch**. Understand why something fails before changing code. Don't weaken tests or checks merely to make them pass.
