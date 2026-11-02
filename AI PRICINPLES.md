@@ -4,3 +4,11 @@
 2. **Verify Before Claiming**. State as fact only what the available evidence supports. Clearly distinguish assumptions and inferences from established facts.
 3. **No Silent Failure, No Silent Data Loss**. Never hide failures or silently discard, truncate, or corrupt data.
 4. **Distrust External Input**. Validate inputs that cross a trust boundary before relying on them. Never assume external inputs are well-formed or safe.
+
+
+## Decision Principles (When multiple options exist, which way to lean)
+
+**Simplicity**
+- **Simple over clever**. Choose the simplest solution that meets the requirements. Optimize for the reader, not the writer.
+- **One source of truth over convenient duplication (DRY)**. Every piece of knowledge has one authoritative representation.
+- **Orthogonal over coupled**. Minimize unnecessary dependencies, so that a change in one place does not cascade into others.
